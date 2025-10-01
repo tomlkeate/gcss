@@ -52,6 +52,11 @@ func ColorRGBA(r, g, b, a uint8) Color {
 	return Color{Color: color.RGBA{R: r, G: g, B: b, A: a}}
 }
 
+// ColorHex returns a new color with the given hex value
+func ColorHex(hex string) Color {
+	return Color{Keyword: hex}
+}
+
 func ColorCurrentColor() Color {
 	return Color{Keyword: "currentColor"}
 }
@@ -62,4 +67,8 @@ func ColorInherit() Color {
 
 func ColorTransparent() Color {
 	return Color{Keyword: "transparent"}
+}
+
+func ColorVar(v string) Color {
+	return Color{Keyword: fmt.Sprintf("var(%s)", v)}
 }

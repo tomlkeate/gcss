@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/AccentDesign/gcss"
-	"github.com/AccentDesign/gcss/variables"
 	"github.com/a-h/templ"
+	"github.com/tomlkeate/gcss"
+	"github.com/tomlkeate/gcss/variables"
 )
 
 var (

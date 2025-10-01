@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/AccentDesign/gcss"
-	"github.com/AccentDesign/gcss/props"
-	"github.com/AccentDesign/gcss/variables"
 	"os"
+
+	"github.com/tomlkeate/gcss"
+	"github.com/tomlkeate/gcss/props"
+	"github.com/tomlkeate/gcss/variables"
 )
 
 var resets = []gcss.Style{

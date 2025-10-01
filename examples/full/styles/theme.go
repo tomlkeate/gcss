@@ -3,8 +3,8 @@ package styles
 import (
 	"bytes"
 	"fmt"
-	"github.com/AccentDesign/gcss/props"
-	"github.com/AccentDesign/gcss/variables"
+	"github.com/tomlkeate/gcss/props"
+	"github.com/tomlkeate/gcss/variables"
 	"io"
 	"slices"
 )

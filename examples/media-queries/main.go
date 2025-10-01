@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/AccentDesign/gcss"
-	"github.com/AccentDesign/gcss/props"
+	"github.com/tomlkeate/gcss"
+	"github.com/tomlkeate/gcss/props"
 	"io"
 	"os"
 )

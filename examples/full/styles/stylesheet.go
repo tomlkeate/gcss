@@ -2,7 +2,7 @@ package styles
 
 import (
 	"bytes"
-	"github.com/AccentDesign/gcss"
+	"github.com/tomlkeate/gcss"
 	"io"
 	"slices"
 	"sync"

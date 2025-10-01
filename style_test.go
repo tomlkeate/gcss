@@ -3,7 +3,7 @@ package gcss
 import (
 	"bytes"
 	"fmt"
-	"github.com/AccentDesign/gcss/props"
+	"github.com/tomlkeate/gcss/props"
 	"image/color"
 	"testing"
 )

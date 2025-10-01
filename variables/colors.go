@@ -1,6 +1,6 @@
 package variables
 
-import "github.com/AccentDesign/gcss/props"
+import "github.com/tomlkeate/gcss/props"
 
 var (
 	Black      = props.ColorRGBA(0, 0, 0, 255)

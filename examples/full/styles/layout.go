@@ -1,9 +1,9 @@
 package styles
 
 import (
-	"github.com/AccentDesign/gcss"
-	"github.com/AccentDesign/gcss/props"
-	"github.com/AccentDesign/gcss/variables"
+	"github.com/tomlkeate/gcss"
+	"github.com/tomlkeate/gcss/props"
+	"github.com/tomlkeate/gcss/variables"
 )
 
 // Layout returns the styles for the layout for the base stylesheet.

@@ -3,9 +3,10 @@ package gcss
 import (
 	"bytes"
 	"fmt"
-	"github.com/AccentDesign/gcss/props"
 	"io"
 	"reflect"
+
+	"github.com/tomlkeate/gcss/props"
 )
 
 type (
@@ -116,6 +117,12 @@ type (
 		// CustomProps contains any additional CSS properties that are not covered by the Props struct.
 		// These properties are directly added to the CSS rule as is.
 		CustomProps []CustomProp
+
+		// Media query that that the styles will be applied to
+		AtRule string
+
+		// Rules that will be applied inside the media query
+		Rules CSSComponent
 	}
 )
 

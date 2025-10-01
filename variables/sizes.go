@@ -1,6 +1,6 @@
 package variables
 
-import "github.com/AccentDesign/gcss/props"
+import "github.com/tomlkeate/gcss/props"
 
 var (
 	Size0            = props.UnitRaw(0)
