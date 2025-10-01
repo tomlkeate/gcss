@@ -104,6 +104,10 @@ type (
 	CustomProp struct {
 		Attr, Value string
 	}
+	MediaQuery struct {
+		MediaQuery string
+		Rules      CSSComponent
+	}
 	// Style represents a CSS style rule.
 	Style struct {
 		// Selector is the CSS selector to which the properties will be applied.
@@ -119,10 +123,7 @@ type (
 		CustomProps []CustomProp
 
 		// Media query that that the styles will be applied to
-		AtRule string
-
-		// Rules that will be applied inside the media query
-		Rules CSSComponent
+		MediaQuery MediaQuery
 	}
 )
 
@@ -168,8 +169,32 @@ func (s *Style) CSS(w io.Writer) error {
 		}
 	}
 
+	// Write the media queries to the writer
+	if err := s.MediaQuery.CSS(&buf); err != nil {
+		return err
+	}
+
 	if buf.Len() > 0 {
 		_, err := fmt.Fprintf(w, "%s{%s}", s.Selector, buf.String())
+		return err
+	}
+
+	return nil
+}
+
+// CSS writes the CSS representation of the media query to the writer.
+func (mq *MediaQuery) CSS(w io.Writer) error {
+	if mq.MediaQuery == "" {
+		return nil
+	}
+
+	if _, err := fmt.Fprintf(w, "%s{", mq.MediaQuery); err != nil {
+		return err
+	}
+
+	mq.Rules.CSS(w)
+
+	if _, err := fmt.Fprint(w, "}"); err != nil {
 		return err
 	}
 
