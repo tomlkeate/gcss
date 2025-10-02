@@ -105,8 +105,10 @@ type (
 		Attr, Value string
 	}
 	MediaQuery struct {
+		// The media query string
 		MediaQuery string
-		Rules      CSSComponent
+		// The styles that will be applied to the media query
+		Rules CSSComponent
 	}
 	// Style represents a CSS style rule.
 	Style struct {
@@ -154,7 +156,7 @@ func (p *Props) CSS(w io.Writer) error {
 }
 
 // CSS writes the CSS representation of the style to the writer.
-func (s *Style) CSS(w io.Writer) error {
+func (s Style) CSS(w io.Writer) error {
 	var buf bytes.Buffer
 
 	// Write the standard properties to the writer.
@@ -183,7 +185,7 @@ func (s *Style) CSS(w io.Writer) error {
 }
 
 // CSS writes the CSS representation of the media query to the writer.
-func (mq *MediaQuery) CSS(w io.Writer) error {
+func (mq MediaQuery) CSS(w io.Writer) error {
 	if mq.MediaQuery == "" {
 		return nil
 	}

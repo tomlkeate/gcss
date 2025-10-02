@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ### v0.1.3
 
-Added stylesheets
+Added styles for Templ Support
 
 Added support for media queries
 
