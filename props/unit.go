@@ -1,6 +1,9 @@
 package props
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type (
 	UnitType int
@@ -109,4 +112,18 @@ func UnitInherit() Unit {
 
 func UnitInitial() Unit {
 	return Unit{Type: UnitTypeInitial}
+}
+
+func UnitPadding(units ...Unit) Unit {
+	if len(units) == 0 || len(units) > 4 {
+		panic("Cannot convert to padding")
+	}
+
+	str := make([]string, len(units))
+
+	for i, u := range units {
+		str[i] = u.String()
+	}
+
+	return UnitRaw(strings.Join(str, " "))
 }
