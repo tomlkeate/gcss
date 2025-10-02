@@ -40,6 +40,7 @@ type (
 		CaptionSide             props.CaptionSide         `css:"caption-side"`
 		Color                   props.Color               `css:"color"`
 		ColumnGap               props.Unit                `css:"column-gap"`
+		Content                 props.Content             `css:"content"`
 		Cursor                  props.Cursor              `css:"cursor"`
 		Display                 props.Display             `css:"display"`
 		FlexBasis               props.Unit                `css:"flex-basis"`
