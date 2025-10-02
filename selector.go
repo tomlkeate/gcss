@@ -2,6 +2,11 @@ package gcss
 
 type Selector string
 
+// Element selector
+func SelectorElement(element string) Selector {
+	return Selector(element)
+}
+
 // Id selector
 func SelectorId(id string) Selector {
 	return Selector("#" + id)
