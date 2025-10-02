@@ -1,6 +1,19 @@
 package gcss
 
+import "strings"
+
 type Selector string
+
+// Multiple selectors comma seperated
+func SelectorGroup(selectors ...Selector) Selector {
+	strs := make([]string, len(selectors))
+
+	for i, s := range selectors {
+		strs[i] = string(s)
+	}
+
+	return Selector(strings.Join(strs, ", "))
+}
 
 // Element selector
 func SelectorElement(element string) Selector {
