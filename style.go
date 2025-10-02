@@ -115,7 +115,7 @@ type (
 	Style struct {
 		// Selector is the CSS selector to which the properties will be applied.
 		// It can be any valid CSS selector like class, id, element type, etc.
-		Selector string
+		Selector Selector
 
 		// Props contains the standard CSS properties that will be applied to the selector.
 		// These properties are represented by the Props struct and are strongly typed.
